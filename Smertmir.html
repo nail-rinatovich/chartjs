@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./Chart.js"></script>
+<script>
+    var myChart = new Chart(ctx, {...});
+</script>
+<link rel="stylesheet" type="text/css" href="./Chart.min.css">
+  </head>
+  <body>
+    <canvas id="myChart" width="100" height="50"></canvas>
+    <script>
+      function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+}
+const a = (2, 106);
+const b = a * (2, 7.679) + 0.026;
+const c = b * (3, 3.03) + 0.5800000000004;
+const d = c * (5, 1.479) + 1.307;
+const e = d * (2, 3.916) + 2.6;
+const f = e * (2, 4.6677) + 0.5608;
+const g = f * (2, 2.486) + 24.21999999997 ;
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['27 Января', '10 Февраля', '24 Февраля', '9 Марта', ' 23 Марта', ' 6 Апреля', '20 Апреля'],
+            datasets: [{
+                label: 'График смертности коронавируса в мире',
+                data: [a, b, c, d, e, f, g],
+                backgroundColor: [
+                    'rgba(44, 51, 55, 0.9)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(120, 180, 40, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(225, 0, 0, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(120, 180, 40, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    </script>
+  </body>
+</html>
