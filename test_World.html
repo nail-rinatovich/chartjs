@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./Chart.js"></script>
+<script>
+    var myChart = new Chart(ctx, {...});
+</script>
+<link rel="stylesheet" type="text/css" href="./Chart.min.css">
+  </head>
+  <body>
+    <ul class="menu-main">
+      <li><a href=".\menu.html" >Меню</a></li>
+      <li><a href=".\index.html" class="current">Заболевших в мире</a></li>
+      <li><a href=".\index2.html">Заболевших в России</a></li>
+      <li><a href=".\Smertmir.html">Смерти в мире</a></li>
+      <li><a href=".\Smertru.html">Смерти в России</a></li>
+      <li><a href=".\healths.html">Выздоравливания в мире</a></li>
+      <li><a href=".\graphicRuSSia.html">Выздоравливания в России</a></li>
+      <li><a href=".\test_World.html">Количество проведенных тестов в мире</a></li>
+      <li><a href=".\test_RUS.html">Количество проведенных тестов в России</a></li>
+    </ul>
+    <canvas id="myChart" width="100" height="49"></canvas>
+    <script>
+      function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+}
+const a = 10265
+const b = 37468
+const c = 64748
+const d = 75936
+const e = 83662
+const f = 101683
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Заражение в первый месяц', 'Заражение в второй месяц', 'Заражение в третий месяц', 'Заражение в четвертый месяц', 'Заражение в пятый месяц','Заражение в шестой месяц'],
+            datasets: [{
+                label: 'График заболевших коронавирусом в мире',
+                data: [a, b, c, d, e, f],
+                backgroundColor: [
+                    'rgba(200, 40, 40, 1)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    </script>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+    .menu-main {
+      list-style: none;
+      margin: 30px 0 5px;
+      text-align: center;
+      background: white;
+    }
+    .menu-main li {display: inline-block;}
+    .menu-main li:after {
+      content: "|";
+      color: #606060;
+      display: inline-block;
+      vertical-align:top;
+    }
+    .menu-main li:last-child:after {content: none;}
+    .menu-main a {
+      text-decoration: none;
+      font-family: 'Ubuntu Condensed', sans-serif;
+      letter-spacing: 2px;
+      position: relative;
+      padding-bottom: 20px;
+      margin: 0 24px 0 20px;
+      font-size: 15px;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: color .2s;
+    }
+    .menu-main a, .menu-main a:visited {color: #9d999d;}
+    .menu-main a.current, .menu-main a:hover{color: black;}
+    .menu-main a:before,
+    .menu-main a:after {
+      content: "";inherit
+      position: absolute;
+      height: 1px;
+      top: auto;
+      right: 50%;
+      bottom: -5px;
+      left: 50%;
+      background: black;
+      transition: .8s;
+    }
+    .menu-main a:hover:before, .menu-main .current:before {left: 0;}
+    .menu-main a:hover:after, .menu-main .current:after {right: 0;}
+    @media (max-width: 550px) {
+    .menu-main {padding-top: 0;}
+    .menu-main li {display: block;}
+    .menu-main li:after {content: none;}
+    .menu-main a {
+      padding: 10px 0 10px;
+      margin: 0 20px;
+    }
+    }
+
+</style>
+  </body>
+</html>
