@@ -7,10 +7,21 @@
 <script>
     var myChart = new Chart(ctx, {...});
 </script>
-
+  <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" type="text/css" href="./Chart.min.css">
   </head>
   <body>
+    <ul class="menu-main">
+      <li><a href=".\menu.html" >Меню</a></li>
+      <li><a href=".\index (1).html" >Заболевших в мире</a></li>
+      <li><a href=".\index2.html">Заболевших в России</a></li>
+      <li><a href=".\smertmir.html">Смерти в мире</a></li>
+      <li><a href=".\smertru.html">Смерти в России</a></li>
+      <li><a href=".\healths.html" class="current">Выздоравливания в мире</a></li>
+      <li><a href=".\graphicRuSSia.html">Выздоравливания в России</a></li>
+      <li><a href=".\">Количество проведенных тестов в мире</a></li>
+      <li><a href=".\">Количество проведенных тестов в России</a></li>
+    </ul>
     <canvas id="myChart" width="100" height="50"></canvas>
     <script>
       function getRandomInt(min, max) {
@@ -20,7 +31,7 @@
 }
 const a = 15000 ; // Ноябрь
 const b = 78000 ; // Декабрь
-const c = 100000 ;// Январь                
+const c = 100000 ;// Январь
 const d =  350000; // Февраль
 const e = 400000 ; // Март
 const f = 561530 ; // Апрель
