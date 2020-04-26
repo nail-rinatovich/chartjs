@@ -11,17 +11,38 @@
 <link rel="stylesheet" type="text/css" href="./Chart.min.css">
   </head>
   <body>
-    <ul class="menu-main">
-        <li><a href=".\menu.html">Меню</a></li>
-        <li><a href=".\index (1).html">Заболевших в мире</a></li>
-        <li><a href=".\index2.html" class="current">Заболевших в России</a></li>
-        <li><a href=".\smertmir.html">Смерти в мире</a></li>
-        <li><a href=".\smertru.html">Смерти в России</a></li>
-        <li><a href=".\healths.html">Выздоравливания в мире</a></li>
-        <li><a href=".\graphicRuSSia.html">Выздоравливания в России</a></li>
-        <li><a href="">Количество проведенных тестов в мире</a></li>
-        <li><a href="">Количество проведенных тестов в России</a></li>
-      </ul>
+    <div class="menu">
+
+
+    <div class="dropdown">
+      <button class="dropbtn" id ="butzab">Заболеваемость</button>
+      <div class="dropdown-content" id ="butzab">
+        <a href="./index2.html">В России</a>
+        <a href="./index%20(1).html">В мире</a>
+          </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn" id ="butzd">Выздоровление</button>
+      <div class="dropdown-content" id ="butzd">
+        <a href="./graphicRuSSia.html">В России</a>
+        <a href="./healths.html">В мире</a>
+          </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn" id="butsm">Смертность</button>
+      <div class="dropdown-content" id="butsm">
+        <a href="./Smertru.html">В России</a>
+        <a href="./smertmir.html">В мире</a>
+          </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn" id="buttest">Количество тестов</button>
+      <div class="dropdown-content" id="buttest">
+        <a href="./test_RUS.html">В России</a>
+        <a href="./test_World.html">В мире</a>
+          </div>
+    </div>
+    </div>
     <canvas id="myChart" width="100" height="49"></canvas>
     <script>
       function getRandomInt(min, max) {
