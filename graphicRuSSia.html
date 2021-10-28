@@ -56,6 +56,14 @@
       <a href="./test_World.html">В мире</a>
         </div>
   </div>
+  <div class="dropdown">
+<form action="./index.html">
+
+   <button class="dropbtn" id="butinfo">О проекте</button>
+</form>
+
+
+  </div>
   </div>
     <canvas id="myChart" width="100" height="50"></canvas>
     <script>
@@ -64,12 +72,12 @@
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 }
-const a = 12 ; // Ноябрь
-const b = 25 ; // Декабрь
-const c = 50 ;// Январь
-const d =  500; // Февраль
-const e = 1500 ; // Март
-const f = 2500 ; // Апрель
+const a = 0 ; // Ноябрь
+const b = 0 ; // Декабрь
+const c = 2 ;// Январь
+const d =  15; // Февраль
+const e = 29; // Март
+const f = 10286; // Апрель
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'line',

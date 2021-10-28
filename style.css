@@ -16,9 +16,15 @@
 #butzd {
       background-color: #4CAF50;
 }
+#butinfo {
+      background-color: #5bc0de;
+}
 #buttest{
   background-color: #007bff;
   width:200px;
+}
+.text {
+  padding: 2% 20% 2% 10%;
 }
 .dropdown {
     position: relative;

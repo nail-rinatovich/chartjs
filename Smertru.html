@@ -42,6 +42,13 @@
         <a href="./test_World.html">В мире</a>
           </div>
     </div>
+    <div class="dropdown">
+      <form action="./index.html">
+
+         <button class="dropbtn" id="butinfo">О проекте</button>
+      </form>
+    </div>
+    </div>
     </div>
     <canvas id="myChart" width="100" height="50"></canvas>
     <script>
@@ -51,17 +58,17 @@
   return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 }
 const a = (2, 0);
-const b = a * (2, 0);
-const c = b * (3, 0);
-const d = c * (5, 0);
-const e = d * (2, 0) + 9;
-const f = e * (2, 16) + 4;
+const b = a * (2, 0) + 2;
+const c = b * (3, 23.5) ;
+const d = c * (5, 4.2) + 3.6;
+const e = d * (2, 3.3) + 18.7;
+const f = e * (2, 1.4) + 21.2;
 const g = f * (2, 2.73) + 0.96;
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['8 Февраля', '17 Февраля', '2 Марта', '16 Марта', ' 30 Марта', ' 13 Апреля', '20 Апреля'],
+            labels: ['16 Марта', ' 26 Марта', '5 Апреля', '15 Апреля', '25 Апреля', '29 Апреля'],
             datasets: [{
                 label: 'График смертности коронавируса в России',
                 data: [a, b, c, d, e, f, g],

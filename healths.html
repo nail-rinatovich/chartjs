@@ -42,7 +42,15 @@
         <a href="./test_World.html">В мире</a>
           </div>
     </div>
+    <div class="dropdown">
+      <form action="./index.html">
+
+         <button class="dropbtn" id="butinfo">О проекте</button>
+      </form>
     </div>
+    </div>
+    </div>
+
     <canvas id="myChart" width="100" height="50"></canvas>
     <script>
       function getRandomInt(min, max) {
@@ -50,12 +58,12 @@
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 }
-const a = 15000 ; // Ноябрь
-const b = 78000 ; // Декабрь
-const c = 100000 ;// Январь
-const d =  350000; // Февраль
-const e = 400000 ; // Март
-const f = 561530 ; // Апрель
+const a = 6256; // Ноябрь
+const b = 27671  ; // Декабрь
+const c = 53286  ;// Январь
+const d = 66535; // Февраль
+const e = 109583 ; // Март
+const f = 928658 ; // Апрель
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'line',
