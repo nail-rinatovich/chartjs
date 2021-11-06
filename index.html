@@ -1,53 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <script src="./Chart.js"></script>
-<script>
-    var myChart = new Chart(ctx, {...});
-</script>
-<link rel="stylesheet" type="text/css" href="./Chart.min.css">
-<link rel="stylesheet" href="./style.css">
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+    {% include 'head.html' %}
+
   <body>
-    <div class="menu">
+ {% include 'nav.html' %}
 
-
-    <div class="dropdown">
-      <button class="dropbtn" id ="butzab">Заболеваемость</button>
-      <div class="dropdown-content" id ="butzab">
-        <a href="./index2.html">В России</a>
-        <a href="./index%20(1).html">В мире</a>
-          </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn" id ="butzd">Выздоровление</button>
-      <div class="dropdown-content" id ="butzd">
-        <a href="./graphicRuSSia.html">В России</a>
-        <a href="./healths.html">В мире</a>
-          </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn" id="butsm">Смертность</button>
-      <div class="dropdown-content" id="butsm">
-        <a href="./Smertru.html">В России</a>
-        <a href="./smertmir.html">В мире</a>
-          </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn" id="buttest">Количество тестов</button>
-      <div class="dropdown-content" id="buttest">
-        <a href="./test_RUS.html">В России</a>
-        <a href="./test_World.html">В мире</a>
-          </div>
-    </div>
-    <div class="dropdown">
-      <button href="./index.html" class="dropbtn" id="butinfo">О проекте</button>
-
-    </div>
-    </div>
-    </div>
 
 <div class="text">
   <p>Здравствуйте! Представляем вам проект

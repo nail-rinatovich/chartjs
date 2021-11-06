@@ -1,70 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-  	<style>
-  	  body {
-    margin: 0; /* Убираем отступы */
-   }
-   .parent {
-    margin: 20%; /* Отступы вокруг элемента */
-    background: #fd0; /* Цвет фона */
-    padding: 10px; /* Поля вокруг текста */
-   }
-   .child {
-    border: 3px solid #666; /* Параметры рамки */
-    padding: 10px; /* Поля вокруг текста */
-    margin: 10px; /* Отступы вокруг */
-   </style>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="./Chart.js"></script>
-<script>
-    var myChart = new Chart(ctx, {...});
-</script>
-<link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" type="text/css" href="./Chart.min.css">
-  </head>
+   {% include 'head.html' %}
+
   <body>
-  <div class="menu">
+ {% include 'nav.html' %}
 
-
-  <div class="dropdown">
-    <button class="dropbtn" id ="butzab">Заболеваемость</button>
-    <div class="dropdown-content" id ="butzab">
-      <a href="./index2.html">В России</a>
-      <a href="./index%20(1).html">В мире</a>
-        </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn" id ="butzd">Выздоровление</button>
-    <div class="dropdown-content" id ="butzd">
-      <a href="./graphicRuSSia.html">В России</a>
-      <a href="./healths.html">В мире</a>
-        </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn" id="butsm">Смертность</button>
-    <div class="dropdown-content" id="butsm">
-      <a href="./Smertru.html">В России</a>
-      <a href="./smertmir.html">В мире</a>
-        </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn" id="buttest">Количество тестов</button>
-    <div class="dropdown-content" id="buttest">
-      <a href="./test_RUS.html">В России</a>
-      <a href="./test_World.html">В мире</a>
-        </div>
-  </div>
-  <div class="dropdown">
-<form action="./index.html">
-
-   <button class="dropbtn" id="butinfo">О проекте</button>
-</form>
-
-
-  </div>
-  </div>
     <canvas id="myChart" width="100" height="50"></canvas>
     <script>
       function getRandomInt(min, max) {
@@ -116,5 +56,19 @@ const f = 10286; // Апрель
         }
     });
     </script>
+    	<style>
+  	  body {
+    margin: 0; /* Убираем отступы */
+   }
+   .parent {
+    margin: 20%; /* Отступы вокруг элемента */
+    background: #fd0; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+   }
+   .child {
+    border: 3px solid #666; /* Параметры рамки */
+    padding: 10px; /* Поля вокруг текста */
+    margin: 10px; /* Отступы вокруг */
+   </style>
   </body>
 </html>
