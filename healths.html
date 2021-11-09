@@ -14,20 +14,26 @@
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 }
-const a = 6256; // Ноябрь
-const b = 27671  ; // Декабрь
-const c = 53286  ;// Январь
-const d = 66535; // Февраль
-const e = 109583 ; // Март
-const f = 928658 ; // Апрель
+const a = 2936;
+const b = 30904  ;
+const c = 48727  ;
+const d = 107527;
+const e = 156458 ;
+const f = 206698 ;
+const g = 89951  ;
+const h = 528383  ;
+const i = 133174;
+const j = 104567 ;
+const k = 145368 ;
+
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Ноябрь', 'Декабрь', 'Январь', 'Февраль', 'Март', 'Апрель'],
+            labels: ['1.03.2020', '1.05.2020', '1.07.2020', '1.09.2020', '1.11.2020', '1.01.2021', '1.03.2021', '1.05.2021', '1.07.2021', '1.09.2021', '1.10.2021'],
             datasets: [{
-                label: 'График выздоравливания коронавирусом',
-                data: [a, b, c, d, e, f],
+                label: 'График выздоравливания от коронавируса в мире',
+                data: [a, b, c, d, e, f, g, h, i, j, k],
                 backgroundColor: [
                     'rgba(120, 180, 40, 1)',
                     'rgba(54, 162, 235, 0.2)',
