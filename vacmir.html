@@ -1,9 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-   {% include 'head.html' %}
+    <head>
+     <script src="/static_dir/Chart.js"></script>
+    <script src="./Chart.js"></script>
+<script>
+    var myChart = new Chart(ctx, {...});
+</script>
+<link rel="stylesheet" type="text/css" href="./Chart.min.css">
+      <link rel="stylesheet" href="/static_dir/style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
 
   <body>
- {% include 'nav.html' %}
+     <div class="menu">
+
+
+    <div class="dropdown">
+      <button class="dropbtn" id ="butzab">Заболеваемость</button>
+      <div class="dropdown-content" id ="butzab">
+        <a href="./morbiditymir">В России</a>
+        <a href="./morbidityrus">В мире</a>
+          </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn" id ="butzd">Выздоровление</button>
+      <div class="dropdown-content" id ="butzd">
+        <a href="./healthrus">В России</a>
+        <a href="./healthmir">В мире</a>
+          </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn" id="butsm">Смертность</button>
+      <div class="dropdown-content" id="butsm">
+        <a href="./smertrus">В России</a>
+        <a href="./smertmir">В мире</a>
+          </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn" id="buttest">Количество тестов</button>
+      <div class="dropdown-content" id="buttest">
+        <a href="./testrus">В России</a>
+        <a href="./testmir">В мире</a>
+          </div>
+    </div>
+      <div class="dropdown">
+      <button class="dropbtn" id="">Вакцинация</button>
+      <div class="dropdown-content" id="buttest">
+        <a href="./vacrus">В России</a>
+        <a href="./vacmir">В мире</a>
+          </div>
+    </div>
+    <div class="dropdown">
+        <form action="/">
+      <button  class="dropbtn" id="butinfo">О проекте</button>
+      </form>
+
+    </div>
+    </div>
 
     </div>
 
@@ -14,27 +68,38 @@
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 }
-const a = 6256; // Ноябрь
-const b = 27671  ; // Декабрь
-const c = 53286  ;// Январь
-const d = 66535; // Февраль
-const e = 109583 ; // Март
-const f = 928658 ; // Апрель
+const a = 31719; // Декабрь
+const b = 12694839  ; // Январь
+const c = 57302042  ; // Февраль
+const d = 140808661; // Март
+const e = 281778787 ; // Апрель
+const f = 443474096 ; // Май
+const g = 642104335; // Июнь
+const h = 919599792; // Июль
+const i = 2139180034; // Август
+const j = 2659043584; // Сеньтябрь
+const k = 3050178289; // Октябрь
+const l = 3136569073; // Ноябрь
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Ноябрь', 'Декабрь', 'Январь', 'Февраль', 'Март', 'Апрель'],
+            labels: ['Декабрь', 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сеньтябрь', 'Октябрь', 'Ноябрь'],
             datasets: [{
                 label: 'График вакцинации в мире',
-                data: [a, b, c, d, e, f],
+                data: [a, b, c, d, e, f, g, h, i, j, k, l],
                 backgroundColor: [
                     'rgba(120, 180, 40, 1)',
                     'rgba(54, 162, 235, 0.2)',
                     'rgba(255, 206, 86, 0.2)',
                     'rgba(75, 192, 192, 0.2)',
                     'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(54, 162, 235, 0.2)'
                 ],
                 borderColor: [
                     'rgba(255, 150, 152, 1)',
@@ -42,7 +107,13 @@ const f = 928658 ; // Апрель
                     'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
                     'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(120, 180, 40, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(120, 180, 40, 1)',
                 ],
                 borderWidth: 1
             }]
