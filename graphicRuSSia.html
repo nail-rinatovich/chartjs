@@ -5,6 +5,8 @@
   <body>
  {% include 'nav.html' %}
 
+    </div>
+
     <canvas id="myChart" width="100" height="50"></canvas>
     <script>
       function getRandomInt(min, max) {
@@ -12,20 +14,26 @@
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 }
-const a = 0 ; // Ноябрь
-const b = 0 ; // Декабрь
-const c = 2 ;// Январь
-const d =  15; // Февраль
-const e = 29; // Март
-const f = 10286; // Апрель
+const a = 0;
+const b = 1600  ;
+const c = 10300  ;
+const d = 6300;
+const e = 10300 ;
+const f = 25800 ;
+const g = 11300  ;
+const h = 8600  ;
+const i = 16900;
+const j = 18300 ;
+const k = 23200 ;
+
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Ноябрь', 'Декабрь', 'Январь', 'Февраль', 'Март', 'Апрель'],
+            labels: ['1.03.2020', '1.05.2020', '1.07.2020', '1.09.2020', '1.11.2020', '1.01.2021', '1.03.2021', '1.05.2021', '1.07.2021', '1.09.2021', '1.10.2021'],
             datasets: [{
-                label: 'График выздоравливания коронавирусом в России ',
-                data: [a, b, c, d, e, f],
+                label: 'График выздоравливания от коронавируса в России',
+                data: [a, b, c, d, e, f, g, h, i, j, k],
                 backgroundColor: [
                     'rgba(120, 180, 40, 1)',
                     'rgba(54, 162, 235, 0.2)',
@@ -35,7 +43,7 @@ const f = 10286; // Апрель
                     'rgba(255, 159, 64, 0.2)'
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 150, 152, 1)',
                     'rgba(54, 162, 235, 1)',
                     'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
@@ -56,19 +64,5 @@ const f = 10286; // Апрель
         }
     });
     </script>
-    	<style>
-  	  body {
-    margin: 0; /* Убираем отступы */
-   }
-   .parent {
-    margin: 20%; /* Отступы вокруг элемента */
-    background: #fd0; /* Цвет фона */
-    padding: 10px; /* Поля вокруг текста */
-   }
-   .child {
-    border: 3px solid #666; /* Параметры рамки */
-    padding: 10px; /* Поля вокруг текста */
-    margin: 10px; /* Отступы вокруг */
-   </style>
   </body>
 </html>
