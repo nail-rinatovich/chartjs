@@ -6,27 +6,31 @@
  {% include 'nav.html' %}
 
     <canvas id="myChart" width="100" height="50"></canvas>
-    <script>
+   <script>
       function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 }
-const a = (2, 106);
-const b = a * (2, 7.679) + 0.026;
-const c = b * (3, 3.03) + 0.5800000000004;
-const d = c * (5, 1.479) + 1.307;
-const e = d * (2, 3.916) + 2.6;
-const f = e * (2, 4.6677) + 0.5608;
-const g = f * (2, 2.486) + 24.21999999997 ;
+const a = 54;
+const b = 5471;
+const c = 5326;
+const d = 6663;
+const e = 5122;
+const f = 10114;
+const g = 7656;
+const i = 13316;
+const h = 8667;
+const l = 12509;   
+const k = 8581;
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['27 Января', '10 Февраля', '24 Февраля', '9 Марта', ' 23 Марта', ' 6 Апреля', '20 Апреля'],
+            labels: ['01.03.2020', ' 01.05.2020', '01.07.2020', '01.09.2020', '01.11.2020', '01.01.2021', '01.03.2021', '01.05.2021', '01.07.2021', '01.9.2021', '01.10.2021'],
             datasets: [{
                 label: 'График смертности коронавируса в мире',
-                data: [a, b, c, d, e, f, g],
+                data: [a, b, c, d, e, f, g, i, h, l, k],
                 backgroundColor: [
                     'rgba(44, 51, 55, 0.9)',
                     'rgba(54, 162, 235, 0.2)',
